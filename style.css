@@ -13,3 +13,48 @@ footer{border-top:1px solid var(--line);padding:27px 7vw;display:flex;align-item
 @media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:135px;gap:40px}.hero-copy{max-width:720px}.robot-wrap{min-height:450px}.robot-frame{height:450px;max-width:600px}.two-col{gap:4vw}.showcase{grid-template-columns:1fr}.showcase-image{min-height:420px}.showcase-copy{padding:60px 9vw}.contact-panel{padding:32px;gap:30px}}
 @media(max-width:600px){.topbar{height:68px;padding:0 6vw}.brand{font-size:1.25rem}.hero{padding:115px 6vw 65px}.hero h1{font-size:clamp(2.7rem,13vw,4.2rem)}.hero-copy>p{font-size:.91rem}.hero-note{font-size:.48rem;letter-spacing:.08em}.robot-wrap{min-height:350px}.robot-frame{height:350px}.chip{left:-5px;bottom:15px;padding:11px}.section{padding:75px 6vw}.two-col{grid-template-columns:1fr;gap:28px}.two-col h2,.showcase h2,.contact h2{font-size:2.45rem}.showcase-image{min-height:340px}.showcase-copy{padding:50px 6vw}.contact-panel{grid-template-columns:1fr;padding:25px 20px;gap:24px}.person>span{display:none}footer{padding:24px 6vw}footer>span{order:3;width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+/* Ajustes para móviles: tarjeta CYBOT */
+@media (max-width: 600px) {
+  .robot-wrap {
+    min-height: auto;
+    padding-bottom: 45px;
+  }
+
+  .robot-frame {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .robot-frame > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .chip {
+    z-index: 4;
+    bottom: 5px;
+    left: 8px;
+    max-width: calc(100% - 16px);
+    padding: 12px 14px;
+    background: #080e1af5;
+  }
+
+  .chip span {
+    min-width: 0;
+  }
+
+  .chip small {
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+
+  .frame-top,
+  .frame-bottom {
+    left: 14px;
+    right: 14px;
+  }
+}
